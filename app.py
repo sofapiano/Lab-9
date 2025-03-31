@@ -34,6 +34,17 @@ def create_work():
     return 'ok'
 
 
+@app.route('/clear', methods=['POST'])
+def clear_works():
+    try:
+        db.session.query(Work).delete()
+        db.session.commit()
+        return 'ok'
+    except Exception as e:
+        db.session.rollback()
+        return str(e), 500
+
+
 if __name__ == '__main__':
     with app.app_context():
         db.create_all()

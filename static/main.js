@@ -14,3 +14,17 @@ function createWork() {
         }
     })
 }
+
+function clearEverything() {
+    if (confirm('Are you sure you want to clear all records?')) {
+        fetch('/clear', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+        })
+        .then(response => {
+            if (response.ok) {
+                location.reload();
+            }
+        })
+    }
+}
