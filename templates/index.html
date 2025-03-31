@@ -5,28 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>где я батрачила</title>
     <script type="text/javascript" src="/static/main.js"></script>
+    <link rel="stylesheet" href="/static/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
 </head>
 <body>
     <h1>input company name and term of work</h1>
 
     <form>
-        <div>
-            <input type="text" name="company" id="company">
+        <div class="input-box">
             <label for="company">company</label>
+            <input type="text" name="company" id="company">
         </div>
-        <div>
-            <input type="number" name="term" id="term">
+        <div class="input-box">
             <label for="term">term (in months)</label>
+            <input type="number" name="term" id="term">
         </div>
         <div>
-            <button onClick="createWork()" type="button">
+            <button onClick="createWork()" class="button">
                 add
             </button>
         </div>
     </form>
 
     <div>
-        <button onClick="clearEverything()">
+        <button onClick="clearEverything()", class="button">
             clear
         </button>
     </div>
